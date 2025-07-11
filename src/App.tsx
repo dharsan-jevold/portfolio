@@ -117,7 +117,8 @@ const App = () => {
             {/* Home */}
             <motion.section
   id="home"
-  ref={(el) => (sectionRefs.current.home = el)}
+  ref={(el) => { sectionRefs.current.home = el }}
+
   initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
@@ -177,7 +178,8 @@ const App = () => {
             {/* About */}
            <motion.section
   id="about"
-  ref={(el) => (sectionRefs.current.about = el)}
+  ref={(el) => { sectionRefs.current.home = el }}
+
   initial={{ opacity: 0, x: -60 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.6 }}
@@ -216,7 +218,7 @@ const App = () => {
             {/* Portfolio */}
 <motion.section
   id="portfolio"
-  ref={(el) => (sectionRefs.current.portfolio = el)}
+  ref={(el) => { sectionRefs.current.home = el }}
   initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
@@ -310,8 +312,8 @@ const App = () => {
             {/* Contact */}
 <motion.section
   id="contact"
-  ref={(el) => (sectionRefs.current.contact = el)}
-  initial={{ opacity: 0, y: 60 }}
+  ref={(el) => { sectionRefs.current.home = el }}
+initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
