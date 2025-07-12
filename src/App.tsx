@@ -78,7 +78,7 @@ const App = () => {
     {/* Logo + Name */}
     <div className="flex items-center gap-3">
       <img
-        src="./src/assets/djlogo.jpg"
+        src="/djlogo.jpg"
         alt="Logo"
         className="w-10 h-10 rounded-full shadow-purple-500/40 shadow-lg hover:rotate-6 hover:scale-105 transition-all duration-300"
       />
@@ -168,7 +168,7 @@ const App = () => {
   {/* Image */}
   <div className="md:w-1/2">
     <img
-      src="./src/assets/home.jpg"
+      src="/home.jpg"
       alt="Full Stack Developer"
       className="w-full max-w-md mx-auto rounded-xl shadow-lg shadow-purple-500/30 hover:scale-105 transition-transform duration-500"
     />
@@ -189,7 +189,7 @@ const App = () => {
   {/* Profile Image */}
   <div className="md:w-1/2 flex justify-center">
     <img
-      src="./src/assets/profile.jpg"
+      src="/profile.jpg"
       alt="Profile"
       className="w-64 h-64 rounded-2xl shadow-lg shadow-purple-500/30 object-cover hover:scale-105 transition-transform duration-500"
     />
@@ -249,7 +249,7 @@ const App = () => {
     {activeTab === 'projects' && (
       <div>
         <h3 className="text-2xl font-semibold text-purple-300 mb-2">Agrigenius – Smart Farming Platform</h3>
-        <img src="./src/assets/project.jpg" alt="Project" className="rounded-lg mb-4 w-full object-cover max-h-[300px]" />
+        <img src="/project.jpg" alt="Project" className="rounded-lg mb-4 w-full object-cover max-h-[300px]" />
         <p className="text-gray-300 text-left">
           Agrigenius is a full-stack smart farming assistant web app. It includes weather-based crop suggestions,
           soil optimization, and irrigation alerts. Built using React, Node.js, Express, MySQL, and Tailwind.
@@ -261,7 +261,7 @@ const App = () => {
       <div>
         <h3 className="text-2xl font-semibold text-purple-300 mb-4">Internship – Ariv Executions</h3>
         <img
-          src="./src/assets/intern.jpg"
+          src="/intern.jpg"
           alt="Internship Offer Letter"
           className="w-full rounded-lg shadow-md max-h-[500px] object-contain"
         />
