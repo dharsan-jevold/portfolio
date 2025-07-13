@@ -187,13 +187,26 @@ const App = () => {
   className="flex flex-col md:flex-row items-center justify-between min-h-screen px-4 gap-10"
 >
   {/* Profile Image */}
-  <div className="md:w-1/2 flex justify-center">
+  <motion.div
+  className="md:w-1/2 flex justify-center items-center"
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, ease: 'easeOut' }}
+>
+  <div className="relative group">
+    {/* Glowing Ring */}
+    <div className="absolute inset-0 rounded-full animate-pulse border-4 border-purple-500/30 blur-xl opacity-50 group-hover:opacity-70 group-hover:blur-md transition-all duration-300 z-0"></div>
+
+    {/* Image Container with Hover Animations */}
     <img
       src="/profile.jpg"
       alt="Profile"
-      className="w-64 h-64 rounded-2xl shadow-lg shadow-purple-500/30 object-cover hover:scale-105 transition-transform duration-500"
+      className="relative z-10 w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full shadow-2xl shadow-purple-500/40 object-cover transition-transform duration-500 transform hover:scale-105 hover:rotate-1"
     />
   </div>
+</motion.div>
+
 
   {/* About Text */}
   <div className="md:w-1/2 text-center md:text-left">
@@ -272,12 +285,38 @@ const App = () => {
       </div>
     )}
 
-    {activeTab === 'certifications' && (
-      <div>
-        <h3 className="text-2xl font-semibold text-purple-300 mb-2">Certifications</h3>
-        <p className="text-gray-300">These validate my knowledge and dedication to learning.</p>
-      </div>
-    )}
+{activeTab === 'certifications' && (
+  <div>
+    <h3 className="text-2xl font-semibold text-purple-300 mb-6">Certifications</h3>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {[
+        { title: 'AIML With Deep Learning Workshop - IITM', img: '/iitmworkshop.jpg' },
+        { title: '24 Hrs Hackathon - Hack-O-Holics', img: '/hackoholics.jpg' },
+        { title: 'Embedded C Programming Workshop - TCE', img: '/teletec.jpg' },
+        { title: 'Python Basics - SoloLearn', img: '/python.jpg' },
+        { title: 'Exemplary Performance - Mindspark', img: '/mindspark.jpg' },
+        { title: 'Sparkie Champ - Mindspark', img: '/sparkie.jpg' },    
+        { title: 'Mathematics Exemplary - Cambridge', img: '/cambridge.jpg' }
+      ].map((cert, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: idx * 0.1 }}
+          className="bg-transparent p-4 rounded-xl shadow-xl hover:shadow-purple-600/20 transition-shadow duration-300"
+        >
+          <img
+            src={cert.img}
+            alt={cert.title}
+            className="rounded-xl w-full h-48 object-contain mb-3 transition-transform duration-300 hover:scale-105"
+          />
+          <p className="text-purple-300 text-sm text-center">{cert.title}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+)}
 
 {activeTab === 'techstack' && (
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-center mt-4">
