@@ -405,7 +405,8 @@ initial={{ opacity: 0, y: 60 }}
 >
   {/* Anti-spam and redirect */}
   <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_next" value="https://portfolio-zl8m.vercel.app/thankyou" />
+  <input type="hidden" name="_next" value="https://dharsan-jevold-portfolio.vercel.app/thankyou" />
+
 
   <div className="flex flex-col sm:flex-row gap-6">
     <div className="flex-1">
