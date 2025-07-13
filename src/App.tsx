@@ -398,59 +398,67 @@ initial={{ opacity: 0, y: 60 }}
   </div>
 
   {/* Contact Form */}
-  <form
-    action="#"
-    method="POST"
-    className="w-full max-w-2xl bg-white/5 backdrop-blur-md p-8 rounded-xl border border-purple-500 shadow-lg space-y-6"
-  >
-    <div className="flex flex-col sm:flex-row gap-6">
-      <div className="flex-1">
-        <label htmlFor="name" className="block text-sm text-white mb-2">
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Your Name"
-          className="w-full px-4 py-2 rounded-md bg-black/50 text-white border border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-          required
-        />
-      </div>
+<form
+  action="https://formsubmit.co/dharsanb2020.2021@gmail.com"
+  method="POST"
+  className="w-full max-w-2xl bg-white/5 backdrop-blur-md p-8 rounded-xl shadow-lg space-y-6"
+>
+  {/* Anti-spam and redirect */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://portfolio-zl8m.vercel.app/thankyou" />
 
-      <div className="flex-1">
-        <label htmlFor="email" className="block text-sm text-white mb-2">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          placeholder="you@example.com"
-          className="w-full px-4 py-2 rounded-md bg-black/50 text-white border border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-          required
-        />
-      </div>
-    </div>
-
-    <div>
-      <label htmlFor="message" className="block text-sm text-white mb-2">
-        Message
+  <div className="flex flex-col sm:flex-row gap-6">
+    <div className="flex-1">
+      <label htmlFor="name" className="block text-sm text-white mb-2">
+        Name
       </label>
-      <textarea
-        id="message"
-        rows={5}
-        placeholder="Your message..."
-        className="w-full px-4 py-2 rounded-md bg-black/50 text-white border border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        className="w-full px-4 py-2 rounded-md bg-black/50 text-white border border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
         required
-      ></textarea>
+      />
     </div>
 
-    <button
-      type="submit"
-      className="bg-purple-500 hover:bg-purple-600 text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all duration-300"
-    >
-      Send Message
-    </button>
-  </form>
+    <div className="flex-1">
+      <label htmlFor="email" className="block text-sm text-white mb-2">
+        Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        className="w-full px-4 py-2 rounded-md bg-black/50 text-white border border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label htmlFor="message" className="block text-sm text-white mb-2">
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows={5}
+      placeholder="Your message..."
+      className="w-full px-4 py-2 rounded-md bg-black/50 text-white border border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
+      required
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    className="bg-purple-500 hover:bg-purple-600 text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all duration-300"
+  >
+    Send Message
+  </button>
+</form>
+
 </motion.section>
 
           </main>
