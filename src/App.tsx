@@ -404,9 +404,8 @@ initial={{ opacity: 0, y: 60 }}
   className="w-full max-w-2xl bg-white/5 backdrop-blur-md p-8 rounded-xl shadow-lg space-y-6"
 >
   {/* Anti-spam and redirect */}
-  <input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_next" value="https://portfolio-zl8m.vercel.app/#thanks" />
-<input type="hidden" name="_next" value="https://dharsan-jevold-portfolio.vercel.app/thanks" />
-
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://portfolio-zl8m.vercel.app/thankyou" />
 
   <div className="flex flex-col sm:flex-row gap-6">
     <div className="flex-1">
@@ -461,16 +460,6 @@ initial={{ opacity: 0, y: 60 }}
 </form>
 
 </motion.section>
-<section id="thanks" className="min-h-screen flex items-center justify-center text-center px-4">
-  <div className="bg-white/10 p-10 rounded-xl shadow-xl max-w-xl">
-    <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-4">Thank You! 🙌</h2>
-    <p className="text-gray-300 text-lg">
-      Your message has been successfully sent. <br />
-      I’ll get back to you as soon as possible.
-    </p>
-  </div>
-</section>
-
 
 
           </main>
